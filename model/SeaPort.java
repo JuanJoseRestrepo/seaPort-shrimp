@@ -22,9 +22,9 @@ this.nit = nit;
 containers = new ArrayList<Container>();
 }
 
-public void addContainer(String id1, double weight1, char type1, String description1, boolean arriving1, int days1, double cost1){
+public void addContainer(Container r1){
 
-containers.add(id,weight,type,description,arriving,days,cost);
+containers.add(r1);
 
 }
 
@@ -39,24 +39,24 @@ int moneyBoys = 0;
 
 for(int i = 0; i < containers.size() ; i++){
 
-if(getInput() == true){
+if(containers.get(i).getInput() == true){
 
-moneyBoys = containers.get(i).calculatedCost();
-
-
-}else if(getInput() == false){
-
-moneyBoys = containers.get(i).calculatedCost();
-
-}
+moneyBoys = (int) containers.get(i).calculatedCost();
 
 
+}else if(containers.get(i).getInput() == false){
 
+moneyBoys = (int)containers.get(i).calculatedCost();
 
 }
 
 
 
+
+}
+
+
+return moneyBoys;
 
 
 }

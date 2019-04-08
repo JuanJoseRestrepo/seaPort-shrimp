@@ -5,12 +5,12 @@ public class Container{
 
 //Constantes
 
-private final static char TANKCONTAINER = 't';
-private final static char DRYVAN20  = 'a';
-private final static char DRYVAN40 = 'b';
-private final static double BASECOST = 2000000;
-private final static double DAYCOSTBYARRIVING = 100000;
-private final static double DAYCOSTBYLEAVING = 150000;
+public final static char TANKCONTAINER = 't';
+public final static char DRYVAN20  = 'a';
+public final static char DRYVAN40 = 'b';
+public final static double BASECOST = 2000000;
+public final static double DAYCOSTBYARRIVING = 100000;
+public final static double DAYCOSTBYLEAVING = 150000;
 
 //Atributos
 
@@ -18,7 +18,7 @@ private String id;
 private double weight;
 private char type;
 private String description;
-private double arriving;
+private boolean arriving;
 private int days;
 private double cost;
 
