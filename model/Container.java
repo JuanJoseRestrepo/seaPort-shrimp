@@ -41,7 +41,7 @@ public String InfoContainer(){
 	msj += "El id del contenedor es:" + id;
 	msj += "El peso del contenedor es:" + weight;
 	msj += "El tipo del contenedor es:" + type;
-	msj += "La descripcion es:" + descripcion;
+	msj += "La descripcion es:" + description;
 	msj += "Si va de salida o no:" + arriving;
 	msj += "Los dias del contenedor son:" + getDays();
 	msj += "El costo del contenedor es:" + calculatedCost();

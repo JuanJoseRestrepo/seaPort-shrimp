@@ -47,7 +47,7 @@ public String infoContainerAndClient(){
 	
 	String msj = "";
 	
-	for(int k = 0; k < containers.size() ; i++){
+	for(int k = 0; k < containers.size() ; k++){
 		
 		msj += containers.get(k).InfoContainer();
 		msj += "Las veces que se solicita el cantidad:" + requestTankContainerAmount();
