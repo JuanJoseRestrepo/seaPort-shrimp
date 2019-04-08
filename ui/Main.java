@@ -1,6 +1,6 @@
 package ui;
 import model.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main{
 
@@ -10,11 +10,23 @@ public static void main(String[] args) {
   Scanner reader = new Scanner(System.in);
 
   SeaPort s = new SeaPort("Camaron que se duerme", "Cra 29a #10b -119", "100031231", "32323232");
-  s.addContainer("A00983123",120.0, 't',"apenas va a salir xdxd",true,12);
-  s.addContainer("A00345678",320.0, 'a',"apenas va a salir xdxd", true,19);
-  s.addContainer("A00123133",520.0, 'b', "apenas va a entrar xdxd", false,28);
   
-  int userInput = 0;
+  Container m = new Container("A00983123",120.0, 't',"apenas va a salir xdxd",true,12);
+  Container ss = new Container("A00345678",320.0, 'a',"apenas va a salir xdxd", true,19);
+  Container zz = new Container("A00123133",520.0, 'b', "apenas va a entrar xdxd", false,28);
+  s.addContainer(m);
+  s.addContainer(ss);
+  s.addContainer(zz);
+  
+  System.out.println("Entrar");
+  System.out.println("1");
+  System.out.println("2");
+  System.out.println("3");
+  System.out.println("4");
+  System.out.println("5");
+  
+  int userInput = reader.nextInt();
+  reader.nextLine();
   
   while(userInput != 5){
 	  
@@ -48,7 +60,7 @@ public static void main(String[] args) {
 
 
   }else if(userInput == 2){
-	  ArratList<Container> contas1 = s.getOutputContainers();
+	  ArrayList<Container> contas1 = s.getOutputContainers();
 	  
 	  for(int i = 0; i < contas1.size(); i++){
 		  

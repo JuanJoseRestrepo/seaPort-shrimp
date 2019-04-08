@@ -46,6 +46,7 @@ public String InfoContainer(){
 	msj += "Los dias del contenedor son:" + getDays();
 	msj += "El costo del contenedor es:" + calculatedCost();
 	
+	return msj;
 	
 }
 
@@ -67,7 +68,9 @@ return costOfThis;
 
 }
 
-
+public String getId(){
+	return id;
+}
 public double getWeight(){
   return weight;
 }
