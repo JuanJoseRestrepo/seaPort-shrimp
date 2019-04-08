@@ -23,7 +23,7 @@ private int days;
 private double cost;
 
 //Constructor
-public Container(String id, double weight,char type, String description,boolean arriving, int days, double cost){
+public Container(String id, double weight,char type, String description,boolean arriving,int days){
 
 this.id = id;
 this.weight = weight;
@@ -31,7 +31,6 @@ this.type = type;
 this.description = description;
 this.arriving = arriving;
 this.days = days;
-this.cost = cost;
 
 }
 
@@ -55,12 +54,12 @@ public String InfoContainer(){
 public double calculatedCost(){
 
 double costOfThis = 0.0;
-
-if(arriving == true){
+//Se sale del puerto
+if(getInput() == true){
 
 costOfThis = (BASECOST * weight) + (days * DAYCOSTBYLEAVING);
-
-}else if(arriving == false){
+//Entra al puerto
+}else if(getInput() == false){
   costOfThis = (days * DAYCOSTBYLEAVING);
 }
 

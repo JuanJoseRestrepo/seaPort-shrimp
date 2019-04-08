@@ -28,7 +28,7 @@ public ArrayList<Container> getOutputContainers(){
 	
 	for(int i = 0; i < containers.size(); i++){
 		
-		if(containers.get(i).getInput == true){
+		if(containers.get(i).getInput() == true){
 				containers.add(c);
 			
 		}
@@ -41,7 +41,6 @@ public ArrayList<Container> getOutputContainers(){
 public void addContainer(Container r1){
 
 containers.add(r1);
-
 }
 
 public String infoContainerAndClient(){
@@ -51,7 +50,7 @@ public String infoContainerAndClient(){
 	for(int k = 0; k < containers.size() ; i++){
 		
 		msj += containers.get(k).InfoContainer();
-		msj += "El dinero total es:" + requestTankContainerAmount();
+		msj += "Las veces que se solicita el cantidad:" + requestTankContainerAmount();
 		
 		
 	}
@@ -60,48 +59,17 @@ public String infoContainerAndClient(){
 	
 }
 
-
 public int requestTankContainerAmount(){
-
-int moneyBoys = 0;
-
-for(int i = 0; i < containers.size() ; i++){
-
-	if(containers.get(i).getInput() == true){
-
-	moneyBoys = (int) containers.get(i).calculatedCost();
-
 	
-		}else if(containers.get(i).getInput() == false){
-
-		moneyBoys = (int)containers.get(i).calculatedCost();
+	int k = 0;
 	
-		}
-	  }
-
-
-	return moneyBoys;
-}
-
-public String listOfTank(){
-	
-	String msj = "";
-	msj = containers.size();
 	for(int i = 0; i < containers.size();i++){
 		
-		if(containers.get(i).getType().equals(Container.TANKCONTAINER)){
-			if(containers.get(i).getInput() == true){
-			
-			msj += containers.get(i).infoContainer();
+		if(containers.get(i).getType() == Container.TANKCONTAINER && containers.get(i).getInput() == true){
+			++k;
 			}
-		}else{
-			
-			msj = "No existe ningún contenedor de tipo cisterna";
 		}
-		
-		
-		
-		
+		return k;
 	}
 	
 	
