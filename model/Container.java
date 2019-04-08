@@ -35,6 +35,21 @@ this.cost = cost;
 
 }
 
+public String InfoContainer(){
+	
+	String msj = "";
+	
+	msj += "El id del contenedor es:" + id;
+	msj += "El peso del contenedor es:" + weight;
+	msj += "El tipo del contenedor es:" + type;
+	msj += "La descripcion es:" + descripcion;
+	msj += "Si va de salida o no:" + arriving;
+	msj += "Los dias del contenedor son:" + getDays();
+	msj += "El costo del contenedor es:" + calculatedCost();
+	
+	
+}
+
 
 //VERDADERO SI SALE, FALSO SI ENTRA
 public double calculatedCost(){
@@ -52,6 +67,7 @@ costOfThis = (BASECOST * weight) + (days * DAYCOSTBYLEAVING);
 return costOfThis;
 
 }
+
 
 public double getWeight(){
   return weight;
