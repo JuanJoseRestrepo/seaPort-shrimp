@@ -29,7 +29,7 @@ public ArrayList<Container> getOutputContainers(){
 	for(int i = 0; i < containers.size(); i++){
 		
 		if(containers.get(i).getInput() == true){
-				containers.add(c);
+				c.add(containers.get(i));
 			
 		}
 		
