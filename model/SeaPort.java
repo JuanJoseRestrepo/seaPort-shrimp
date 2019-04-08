@@ -24,8 +24,18 @@ containers = new ArrayList<Container>();
 
 public ArrayList<Container> getOutputContainers(){
 	
+	ArrayList<Container> c = new ArrayList<Container>();
 	
+	for(int i = 0; i < containers.size(); i++){
+		
+		if(containers.get(i).getInput == true){
+				containers.add(c);
+			
+		}
+		
+	}
 	
+	return c;
 }
 
 public void addContainer(Container r1){
