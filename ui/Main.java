@@ -17,6 +17,8 @@ public static void main(String[] args) {
   int userInput = 0;
   
   while(userInput != 5){
+	  
+	if(userInput == 1){
 
   System.out.println("Digite la identificacion ");
   String id1 = reader.nextLine();
@@ -73,7 +75,3 @@ public static void main(String[] args) {
 
 }
 
-
-
-
-}
