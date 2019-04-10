@@ -23,59 +23,58 @@ containers = new ArrayList<Container>();
 }
 
 public ArrayList<Container> getOutputContainers(){
-	
+
 	ArrayList<Container> c = new ArrayList<Container>();
-	
+
 	for(int i = 0; i < containers.size(); i++){
-		
+
 		if(containers.get(i).getInput() == true){
 				c.add(containers.get(i));
-			
+
 		}
-		
+
 	}
-	
+
 	return c;
 }
 
-public void addContainer(Container r1){
+public void addContainer(String id1, double weight1, char type1, String description1, boolean arriving1, int days1){
+
+Container r1 = new Container(id1,weight1,type1,description1,arriving1,days1);
 
 containers.add(r1);
 }
 
 public String infoContainerAndClient(){
-	
+
 	String msj = "";
-	
+
 	for(int k = 0; k < containers.size() ; k++){
-		
+
 		msj += containers.get(k).InfoContainer();
 		msj += "Las veces que se solicita el cantidad:" + requestTankContainerAmount();
-		
-		
+
+
 	}
-	
+
 	return msj;
-	
+
 }
 
 public int requestTankContainerAmount(){
-	
+
 	int k = 0;
-	
+
 	for(int i = 0; i < containers.size();i++){
-		
+
 		if(containers.get(i).getType() == Container.TANKCONTAINER && containers.get(i).getInput() == true){
 			++k;
 			}
 		}
 		return k;
 	}
-	
-	
-	
-	
+
+
+
+
 }
-
-
-
