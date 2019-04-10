@@ -60,6 +60,13 @@ public String InfoContainer(){
 
 
 //VERDADERO SI SALE, FALSO SI ENTRA
+
+/*
+*Este metodo va a calcular el costo de venida del contenedora
+
+@return un costo de tipo double
+
+**/
 public double calculatedCost(){
 
 double costOfThis = 0.0;
