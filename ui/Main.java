@@ -15,19 +15,25 @@ public static void main(String[] args) {
   s.addContainer("A00345678",320.0, 'a',"apenas va a salir xdxd", true,19);
   s.addContainer("A00123133",520.0, 'b', "apenas va a entrar xdxd", false,28);
 
-  System.out.println("Entrar");
-  System.out.println("1");
-  System.out.println("2");
-  System.out.println("3");
-  System.out.println("4");
-  System.out.println("5");
+  boolean exit = false;
+  int userInput =0;
 
-  int userInput = reader.nextInt();
-  reader.nextLine();
 
-  while(userInput != 5){
 
-	if(userInput == 1){
+  while(!exit){
+
+    System.out.println("Entrar");
+    System.out.println("1.");
+    System.out.println("2.");
+    System.out.println("3. DAR LA CANTIDAD DE CONTENEDORES TIPO CISTERNA");
+    System.out.println("4.MOSTRAR INFORMACION");
+    System.out.println("5.SALIR");
+
+    userInput = reader.nextInt();
+    reader.nextLine();
+
+	switch (userInput) {
+    case(1):
 
   System.out.println("Digite la identificacion ");
   String id1 = reader.nextLine();
@@ -51,40 +57,47 @@ public static void main(String[] args) {
   reader.nextLine();
 
   s.addContainer(id1,weight1,type1,description1,arriving1,days1);
+  break;
 
+  case(2):
 
-
-  }else if(userInput == 2){
 	  ArrayList<Container> contas1 = s.getOutputContainers();
 
 	  for(int i = 0; i < contas1.size(); i++){
 
 		  System.out.println("La lista de los que salen son:" + contas1.get(i).getId());
-      
+
 	  }
 
+    break;
 
-
-
-  }else if(userInput == 3){
+    case(3):
 
 	  System.out.println("Estos son los que estan saliendo:" + s.requestTankContainerAmount());
+    break;
 
-
-  }else if(userInput == 4){
+    case(4):
 
 	  System.out.println(s.infoContainerAndClient());
 
-  }else if(userInput == 5)
+    break;
 
+    case(5):
+    exit = true;
 	  System.out.println("Hasta luego, bye mi socio zolo milloz loka, F.R.V a morir, cali pachanguero, vamos a huelerrrrrrrrr");
 
-  }
+    break;
 
 
 
 
 
 }
+
+}
+
+
+}
+
 
 }

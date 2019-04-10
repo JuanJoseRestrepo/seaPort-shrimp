@@ -35,19 +35,27 @@ this.days = days;
 }
 
 public String InfoContainer(){
-	
+
 	String msj = "";
-	
-	msj += "El id del contenedor es:" + id;
-	msj += "El peso del contenedor es:" + weight;
-	msj += "El tipo del contenedor es:" + type;
-	msj += "La descripcion es:" + description;
-	msj += "Si va de salida o no:" + arriving;
-	msj += "Los dias del contenedor son:" + getDays();
-	msj += "El costo del contenedor es:" + calculatedCost();
-	
+
+	msj += "----------------------------------------------------------------------------------------------------------------"+"\n";
+	msj += "El id del contenedor es:" + id +"\n";
+	msj += "----------------------------------------------------------------------------------------------------------------"+"\n";
+	msj += "El peso del contenedor es:" + weight +"\n";
+	msj += "----------------------------------------------------------------------------------------------------------------"+"\n";
+	msj += "El tipo del contenedor es:" + type +"\n";
+	msj += "----------------------------------------------------------------------------------------------------------------"+"\n";
+	msj += "La descripcion es:" + description +"\n";
+	msj += "----------------------------------------------------------------------------------------------------------------"+"\n";
+	msj += "Si va de salida o no:" + arriving +"\n";
+	msj += "----------------------------------------------------------------------------------------------------------------"+"\n";
+	msj += "Los dias del contenedor son:" + getDays() +"\n";
+	msj += "----------------------------------------------------------------------------------------------------------------"+"\n";
+	msj += "El costo del contenedor es:" + calculatedCost() +"\n";
+	msj += "----------------------------------------------------------------------------------------------------------------"+"\n";
+
 	return msj;
-	
+
 }
 
 
